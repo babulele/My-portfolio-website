@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Wycliffe's personal portfolio featuring responsive web projects, clean UI designs, and a passion for modern tech. Let’s build something amazing together.">
+  <title>Wycliffe Portfolio</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <ul style="justify-content: flex-end">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero">
+    <div class="intro-text">
+      <h1>Hi, I'm Wycliffe</h1>
+      <p>Full Stack Developer | Passionate about Building Tech That Empowers</p>
+    </div>
+    <img src="images/profile2.png" alt="Wycliffe - Full Stack Developer" class="profile-photo" style="margin-left: auto" />
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="paragraph">My name is Wycliffe Sure, and I am a young web developer who wants to make websites smart and alien-looking. It started in high school when the magic of web development took hold of my imagination. I am motivated by the idea of designing fantastic user experiences and thrilled every time I get a chance to learn and develop more in this constantly changing industry.</p>
+      <p class="paragraph">My I am driven to do what I do by the satisfaction of knowing that users get to use the sites without any trouble. In this way, I am specifically interested in learning responsive design and accessibility. I am also committed to the web development community, to the point that I share my knowledge and growth.</p>
+      <p class="paragraph">My final desire is to create a website that can be conveniently accessible and all-inclusive. As such a project, I am practicing CSS frameworks and JavaScript problems. It does not matter whether solving a complex bug or creating an excellent interface, I love learning and solving problems.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-bar fade-in">
+        <div class="skill-fill" style="--skill-level: 95%;">&nbsp;</div>
+        <p class="fade-in">HTML</p>
+
+        <div class="skill-bar fade-in">
+            <div class="skill-fill" style="--skill-level: 90%;">&nbsp;</div>
+        </div>
+        <p class="fade-in">CSS</p>
+
+        <div class="skill-bar fade-in">
+            <div class="skill-fill" style="--skill-level: 85%;">&nbsp;</div>
+        </div>
+        <p class="fade-in">JavaScript</p>
+
+        <div class="skill-bar fade-in">
+            <div class="skill-fill" style="--skill-level: 70%;">&nbsp;</div>
+        </div>
+        <p class="fade-in">Python</p>
+
+        <div class="skill-bar fade-in">
+            <div class="skill-fill" style="--skill-level: 75%;">&nbsp;</div>
+        </div>
+        <p class="fade-in">Git & GitHub</p>
+    </section>
+
+    <section id="education" class="fade-in">
+      <h2 class="section-heading">Education Background</h2>
+        <ul>
+            <li>Power Learn Project – Software Engineering (Certification), July – Present</li>
+            <li>Shofco Skills and Training Centre – Computer Packages (Microsoft Office Packages), Jan – Apr 2020</li>
+            <li>Elite Visionary High School, KCSE 2016 – 2019</li>
+            <li>KAG Olympic Education Centre, KCPE 2008 – 2015</li>
+        </ul>
+
+        <!-- Centering wrapper -->
+        <div class="center-btn">
+            <a href="assets/WYCLIFFE MITUNDA .pdf" download>Download CV</a>
+        </div>
+      </section>
+
+      <section id="interests">
+        <h2>Interests</h2>
+        <p style="text-align: left">In the world of technology, the ability of user experience design and all-mighty potential of front-end development indeed bring me thrilling vibes. I wonder how the web page can become an interactive, resourceful user interface with the correct code usage and creativity.</p>
+        <p style="text-align: left">And in terms of work, I am enthusiastic about responsive design and accessibility, the idea that websites should not just be designed well but also be beautiful in terms of user experience, and of course, so that they are accessible to all, including those with disabilities. I am a real fan of following the present CSS frameworks and JavaScript trends.</p>
+        <p style="text-align: left">I am motivated by more than the tech, though. I enjoy the communal part of web development knowledge exchange, learning how others started, and working on open-source. The ongoing education is the central focus of my interest; any project is a thrilling chance for individual and company development. I want to be a skilled full-stack developer in the long term, and I still firmly believe in the accessibility of web design.</p>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-heading">Projects</h2>
+        <article>
+          <h3>Calculator App</h3>
+          <div class="tech-badges">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <p>This is a basic calculator web application built using HTML and CSS, designed to perform simple arithmetic operations...</p> | 
+          <a href="https://github.com/babulele/Calculator-App.git" target="_blank">GitHub</a>
+        </article>
+        
+        <article>
+          <h3>To-Do List App</h3>
+          <div class="tech-badges">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+          </div>
+          <p>This is a simple and clean To-Do List web app built using HTML and CSS. It allows users to visually organize tasks...</p> | 
+          <a href="https://github.com/babulele/To-Do-List-APP.git" target="_blank">GitHub</a>
+        </article>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          
+          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+      </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Wycliffe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

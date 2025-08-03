@@ -1,0 +1,502 @@
+/* ------------------------------
+   Global Reset & Base Styles
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0d0f;
+  color: #f4f4f4;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #00ffc8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #1affff;
+}
+
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------------
+   Navigation Bar
+------------------------------ */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 17, 20, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #00ffc8;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* -----------------Hero Section----------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 8%;
+  min-height: 90vh;
+  background: linear-gradient(145deg, #0b0d0f, #121417);
+}
+
+.intro-text h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #00ffc8, #1affff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  max-width: 500px;
+  border: 4px solid #00ffc8;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+  animation: pulseGlow 3s infinite;
+  background-image: linear-gradient(145deg, #0b0d0f, #121417);
+}
+
+/* ------------Section Styling----------------- */
+section {
+  padding: 5rem 8%;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00ffc8;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #00ffc8;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.paragraph, section p {
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  color: #dcdcdc;
+}
+
+/* ------------------------------
+   Skill Bars
+------------------------------ */
+.skill-bar {
+  background: #1a1a1d;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  height: 25px;
+  width: 60%;
+  border: 1px solid #00ffc8;
+  text-align: center;
+  margin: 0 auto 1rem;
+  max-width: 900px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(to right, #00ffc8, #1affff);
+  width: 0%;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  to {
+    width: var(--skill-level);
+  }
+}
+
+/* ------------------------------
+   Project Cards Hover Zoom
+------------------------------ */
+/* /* #projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+#projects li {
+  background: #121417;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #e6e6e6;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.05);
+}
+
+#projects li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+}
+
+/* ------------------------------
+   Scroll Reveal Fade-in
+------------------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}  */
+
+.section-heading {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  color: #00ffc8;
+  font-size: 2rem;
+}
+
+#projects {
+  text-align: center; /* Ensures the inline-block is centered in its parent */
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #00ffc8, #00aaff);
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+
+/* Section container */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #0e0e10; /* match your site's dark theme */
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Section title */
+#projects h2 {
+  font-size: 2.5rem;
+  color: #00ffc8;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline for section title */
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #00ffc8, #00aaff);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Project articles grid layout */
+#projects article {
+  background-color: #1a1a1d;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  max-width: 700px;
+  box-shadow: 0 8px 24px rgba(0, 255, 200, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#projects article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 255, 200, 0.15);
+}
+
+/* Project titles */
+#projects article h3 {
+  font-size: 1.6rem;
+  color: #00ffc8;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Project descriptions */
+#projects article p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #projects article {
+    padding: 1.5rem;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  #projects article h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ------------Center-Aligned Section Heading (For Education)------------ */
+#education h2.center-heading {
+  text-align: center;
+  margin-left: 0;
+  color: #00ffc8;
+  font-size: 2.2rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+#education h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #00ffc8;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#education h2.left-heading::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #00ffc8;
+  bottom: -10px;
+  left: 0;
+  transform: none;
+}
+
+/* ------------------------------Education Section Styling (inherits About section style)------------------------------ */
+#education ul {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding-left: 1.2rem;
+}
+
+#education ul li {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #dcdcdc;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+#education ul li::before {
+  content: "🎓";
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+/* Optional: Align CV download button */
+#education a[href$=".pdf"] {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: linear-gradient(to right, #00ffc8, #1affff);
+  color: #0b0d0f;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+#education a[href$=".pdf"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+}
+.center-btn {
+  text-align: center;
+}
+
+.center-btn a {
+  display: inline-block;
+}
+
+
+/* ------------------------------
+   Form Styling
+------------------------------ */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+input, textarea {
+  padding: 1rem;
+  background: #121417;
+  color: #fff;
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #1affff;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
+  outline: none;
+}
+
+form button[type="submit"] {
+  background: linear-gradient(to right, #00ffc8, #1affff);
+  color: #0b0d0f;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+form button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+  background: #0b0d0f;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ------------------------------
+   Animations
+------------------------------ */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px #00ffc8, 0 0 30px #00ffc8;
+  }
+  50% {
+    box-shadow: 0 0 25px #00ffc8, 0 0 45px #00ffc8;
+  }
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
